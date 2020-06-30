@@ -1,0 +1,42 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb", "plugin:prettier/recommended"],
+    "globals": {
+        "describe": true,
+        "it": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "expect": true,
+        "require": true,
+        "jest": true,
+        "Generator": false
+    },
+    "plugins": [
+        "react",
+        "react-native",
+        "prettier"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+        "max-len": ["warn", 120, { "ignoreComments": true }],
+        "react-native/split-platform-components": "warn",
+        "react-native/no-inline-styles": "warn",
+        "react-native/no-color-literals": "warn",
+        "react-native/no-raw-text": "warn",
+        "import/extensions": ["warn", "never", { "svg": "always" }],
+        "import/no-unresolved": "off",
+        "react/no-did-update-set-state": "off",
+        "react/forbid-prop-types": ["off", { "forbid": [] }],
+        "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
+        "react/prop-types": ["warn", { "ignore": ["navigation", "actions", "navigate"] }],
+        "react/jsx-wrap-multilines": "off",
+        "global-require": 0,
+        "react/jsx-props-no-spreading": "off"
+    },
+    "env": {
+        "react-native/react-native": true,
+        "jest": true,
+        "browser": true,
+        "node": true
+    }
+}
